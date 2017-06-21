@@ -4,13 +4,16 @@ def index
   @portfolio_items = Portfolio.all
 end 
 
+
+
 def new
   @portfolio_items = Portfolio.new
 end
 
+
+
   def create
     @portfolio_items = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
-  
 
     respond_to do |format|
       if @portfolio_items.save
@@ -21,9 +24,14 @@ end
     end
   end
   
+  
+  
 def edit
   @portfolio_items = Portfolio.find(params[:id])
 end
+
+
+
 
  def update
      @portfolio_items = Portfolio.find(params[:id])
@@ -36,6 +44,13 @@ end
       end
    end
  end
+ 
+ 
+ def show
+    @portfolio_items = Portfolio.find(params[:id])
+ end
+ 
+ 
 end
 
 
