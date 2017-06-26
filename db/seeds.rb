@@ -6,6 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+    )
+end
+
+puts "3 Topics Created"
+
+
 
 10.times do |blog|
    Blog.create!(
@@ -17,7 +26,8 @@
      ex ea commodo consequat. Duis aute irure dolor in reprehenderi
      t in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-     officia deserunt mollit anim id est laborum."
+     officia deserunt mollit anim id est laborum.",
+    topic_id: Topic.last.id
    )
 end
 
@@ -48,7 +58,24 @@ puts "5 skills created"
      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
      officia deserunt mollit anim id est laborum.",
      main_image: "https://placehold.it/600x400",
-     thumb_image: "https://placehold.it/350x200"
+     thumb_image: "http://d0od.wpengine.netdna-cdn.com/wp-content/uploads/2013/09/music-350x2001-350x200.jpg"
+    )
+  end
+  
+  1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title: #{portfolio_item}",
+    subtitle: "Angular",
+    body:"Lorem ipsum dolor sit amet, consectetuer 
+     adipiscing elit, sed do eiusmod tempor incididunt ut
+     labore et dolore magna aliqua. Ut enim ad minim veniam,
+     quis nostrud exercitation ullamco laboris nisi ut aliquip
+     ex ea commodo consequat. Duis aute irure dolor in reprehenderi
+     t in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+     officia deserunt mollit anim id est laborum.",
+     main_image: "https://placehold.it/600x400",
+     thumb_image: "http://d0od.wpengine.netdna-cdn.com/wp-content/uploads/2013/09/music-350x2001-350x200.jpg"
     )
   end
   
