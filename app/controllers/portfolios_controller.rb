@@ -1,17 +1,17 @@
 class PortfoliosController < ApplicationController
 
-def index
-  @portfolio_items = Portfolio.ruby_on_rails_portfolio_items
-end
+ def index
+  @portfolio_items = Portfolio.all
+ end
 
-def angular
+ def angular
   @angular_portfolio_items = Portfolio.angular
-end
+ end
 
 
-def new
+ def new
   @portfolio_items = Portfolio.new
-end
+ end
 
 
 
@@ -29,9 +29,9 @@ end
   
   
   
-def edit
+ def edit
   @portfolio_items = Portfolio.find(params[:id])
-end
+ end
 
 
 
