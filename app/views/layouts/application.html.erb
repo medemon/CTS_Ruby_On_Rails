@@ -20,7 +20,16 @@
 
       <div class="cover-container">
         
-        <div id="background"></div>
+        <%= video_tag(
+          'background.mp4',
+          autoplay: true,
+          loop: true,
+          muted: true,
+          poster: 'motherboard.jpeg',
+          id: 'background'
+          )
+          %>
+      
         <%= render "shared/application_nav" %>
 
         <%= yield %>
