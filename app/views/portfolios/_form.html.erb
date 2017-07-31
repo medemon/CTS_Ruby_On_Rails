@@ -1,7 +1,8 @@
 <%= form_for(@portfolio_item) do |f| %>
   <% if @portfolio_item.errors.any? %>
     <% @portfolio_item.errors.full_messages.each do |error| %>
-    <%= js add_gritter(error, title:  "User's Portfolio",sticky:false) %>
+    <%= alert_generator error %>
+      <% end %>
    <% end%>
   <div class="row">
        <div class="col-md-6"
@@ -25,22 +26,17 @@
                   Upload a thumb image file<%= f.file_field :thumb_image, style:'display:none;'%>
                 </label>
               </div>
-              
-              
        </div>
        
        
        
       <div class="col-md-6">
         <div class="form-group">
-        <%= f.label :body %>
-        <%= f.text_area :body, class: 'form-control',rows:13 %>
+          <%= f.label :body %>
+          <%= f.text_area :body, class: 'form-control',rows:13 %>
         </div>
       </div>
-      
-    
-        
-</div>
+  </div>
  
 
 
@@ -48,11 +44,12 @@
   <div class="col-md-12">
       <h4> Technologies Used</h4>
       
-       <div>
-        <%= f.fields_for :technologies do |technology_form| %>
-        <%= render 'technology_fields', f: technology_form %>
-        <%end%>
         <div>
+         <%= f.fields_for :technologies do |technology_form| %>
+         <%= render 'technology_fields', f: technology_form %>
+        <%end%>
+        
+       <div>
           <%= link_to_add_association 'Add Technology', f, :technologies %>
         </div>
        </div>
