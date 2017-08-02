@@ -14,35 +14,32 @@
   </head>
 
   <body>
-   <div class="site-wrapper">
- 
-    <div class="site-wrapper-inner">
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-      <div class="cover-container">
-        
-        <%= video_tag(
-          'background.mp4',
-          autoplay: true,
-          loop: true,
-          muted: true,
-          poster: 'motherboard.jpeg',
-          id: 'background'
-          )
-          %>
-      
-        <%= render "shared/application_nav" %>
+          <%= video_tag(
+              'background.mp4',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'motherboard.jpeg'
+            )
+            %>
 
-        <%= yield %>
-            
-        <%= render "shared/application_footer" %>
-      <%= alerts %>
+          <%= render "shared/application_nav" %>
 
-        <%= source_helper("application") %>
-    
-     </div>
+          <%= yield %>
 
-   </div>
+          <%= render "shared/application_footer" %>
 
- </div>
+          <%= alerts %>
+
+          <%= source_helper("application") %>
+
+        </div>
+      </div>
+    </div>
   </body>
 </html>
