@@ -3,5 +3,8 @@
         <h1 class="blog-title">Wyatt's Blogs</h1>
         <p class="lead blog-description">Random Blogs and Magical Things</p>
         <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
+        
+        
+       <span> <%= link_to 'Topic List', topics_path %> </span>
     </div>
   </div>
