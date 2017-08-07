@@ -1,7 +1,21 @@
 @import "bootstrap";
 @import "jquery-ui";
 @import "gritter";
+
+@font-face{
+  font-family: 'Cabin', sans-serif;
+  src:font-url('Cab-Regular.ttf');
+  
+}
+
+@font-face{
+  font-family: 'Vollkorn',serif;
+  src:font-url('Vollkorn-Regular.ttf');
+  
+}
+
 body {
+  font-family: 'Cabin', sans-serif;
   min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
 
@@ -35,9 +49,20 @@ body {
   background-color: #f7f7f7;
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,{
+   font-family: 'Vollkorn', serif;
+
+     }
+
+
 .card {
   float: left;
-  width: 33.333%;
+  width: 100%;
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
@@ -66,4 +91,19 @@ footer p {
 .portfolio-container {
   padding-top: 50px;
   
+}
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('motherboard.jpeg') no-repeat;
+  background-size: cover;
 }

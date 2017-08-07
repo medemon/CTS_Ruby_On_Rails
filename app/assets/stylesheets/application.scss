@@ -26,9 +26,20 @@ a:hover {
 /*
  * Base structure
  */
+ 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,{
+   font-family: 'Vollkorn', serif;
+
+     }
 
 html,
 body {
+   font-family: 'Cabin', sans-serif;
   height: 100%;
 }
 body {
@@ -200,7 +211,7 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('motherboard.png') no-repeat;
+  background: image-url('motherboard.jpeg') no-repeat;
   background-size: cover;
 }
 
@@ -219,4 +230,32 @@ body {
 
 .tech-news a {
   color: green;
+}
+
+.app-card-container{
+  color: black;
+  text-align:left;
+}
+
+.app-card-container > .card{
+  padding: 40px;
+  
+}
+
+.profile-img{
+  border: 3px solid black;
+}
+
+.app-card-container a{
+  color: green;
+}
+
+.card-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.card-block {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
